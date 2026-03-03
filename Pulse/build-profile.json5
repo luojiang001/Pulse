@@ -1,0 +1,71 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\29093\\.ohos\\config\\default_Pulse_1hBrojgPI8ESDJtEDgxHLEhalo_Bl8rmtsLvyDKc7sQ=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B1DDD29244777929A20ABC0CACEC1FD058C729C8CBB3BBA2FE320D2F7E22A7F61CDF015F4EDE74D",
+          "profile": "C:\\Users\\29093\\.ohos\\config\\default_Pulse_1hBrojgPI8ESDJtEDgxHLEhalo_Bl8rmtsLvyDKc7sQ=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\29093\\.ohos\\config\\default_Pulse_1hBrojgPI8ESDJtEDgxHLEhalo_Bl8rmtsLvyDKc7sQ=.p12",
+          "storePassword": "0000001BB354E7F3D2A47D14FC43EBE5E3A6CEE19922209FE39BFDF1637774BCE13099B63AD372906FC0D8"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "targetSdkVersion": "6.0.2(22)",
+        "compatibleSdkVersion": "6.0.2(22)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug"
+      },
+      {
+        "name": "release"
+      }
+    ],
+    "capabilities": [
+      {
+        "bundleName": "com.tject.myapplication",
+        "config": [
+          {
+            "name": "Map Kit",
+            "capability": "com.huawei.service.mapkit"
+          }
+        ]
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "collect_personal_info",
+      "srcPath": "./utils/collect_personal_info"
+    }
+  ]
+}

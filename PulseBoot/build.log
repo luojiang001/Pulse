@@ -1,0 +1,40 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.tjetc:PulseBoot >-------------------------
+[INFO] Building PulseBoot 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ PulseBoot ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 10 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ PulseBoot ---
+[WARNING]  Parameter 'compilerVersion' (user property 'maven.compiler.compilerVersion') is deprecated: This parameter is no longer evaluated by the underlying compilers, instead the actual version of the javac binary is automatically retrieved.
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 126 source files with javac [debug parameters release 17] to target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/29093/Desktop/Plus/PulseBoot/src/main/java/com/tjetc/service/Impl/ChatServiceImpl.java:[38,17] 找不到符号
+  符号:   类 Users
+  位置: 类 com.tjetc.service.Impl.ChatServiceImpl
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.475 s
+[INFO] Finished at: 2026-02-02T22:17:29+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.1:compile (default-compile) on project PulseBoot: Compilation failure
+[ERROR] /C:/Users/29093/Desktop/Plus/PulseBoot/src/main/java/com/tjetc/service/Impl/ChatServiceImpl.java:[38,17] 找不到符号
+[ERROR]   符号:   类 Users
+[ERROR]   位置: 类 com.tjetc.service.Impl.ChatServiceImpl
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,321 @@
+{
+  "version": 1,
+  "ohos-module-entry": {
+    "SELECT_TARGET": "default",
+    "MODULE_BUILD_DIR": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build",
+    "TARGETS": {
+      "default": {
+        "SOURCE_ROOT": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\src\\main",
+        "RESOURCES_PATH": [
+          "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\src\\main\\resources"
+        ],
+        "BUILD_PATH": {
+          "OUTPUT_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\outputs\\default",
+          "INTERMEDIA_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates",
+          "JS_ASSETS_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates\\loader_out\\default",
+          "JS_LITE_ASSETS_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates\\loader_out_lite\\default",
+          "RES_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates\\res\\default",
+          "RES_PROFILE_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates\\res\\default\\resources\\base\\profile",
+          "ETS_SUPER_VISUAL_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\cache\\default\\default@CompileArkTS\\esmodule",
+          "JS_SUPER_VISUAL_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\cache\\default\\default@CompileJS\\jsbundle",
+          "WORKER_LOADER": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates\\loader\\default\\loader.json",
+          "MANIFEST_JSON": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates\\manifest\\default",
+          "OUTPUT_METADATA_JSON": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates\\hap_metadata\\default\\output_metadata.json",
+          "SOURCE_MAP_DIR": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates\\source_map\\default"
+        },
+        "BUILD_OPTION": {
+          "debuggable": true
+        }
+      },
+      "ohosTest": {
+        "SOURCE_ROOT": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\src\\ohosTest",
+        "RESOURCES_PATH": [
+          "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\src\\ohosTest\\resources"
+        ],
+        "BUILD_PATH": {
+          "OUTPUT_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\outputs\\ohosTest",
+          "INTERMEDIA_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates",
+          "JS_ASSETS_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates\\loader_out\\ohosTest",
+          "JS_LITE_ASSETS_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates\\loader_out_lite\\ohosTest",
+          "RES_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates\\res\\ohosTest",
+          "RES_PROFILE_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates\\res\\ohosTest\\resources\\base\\profile",
+          "ETS_SUPER_VISUAL_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\cache\\ohosTest\\ohosTest@OhosTestCompileArkTS\\esmodule",
+          "JS_SUPER_VISUAL_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\cache\\ohosTest\\ohosTest@OhosTestCompileJS\\jsbundle",
+          "WORKER_LOADER": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates\\loader\\ohosTest\\loader.json",
+          "MANIFEST_JSON": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates\\manifest\\ohosTest",
+          "OUTPUT_METADATA_JSON": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates\\hap_metadata\\ohosTest\\output_metadata.json",
+          "SOURCE_MAP_DIR": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry\\build\\default\\intermediates\\source_map\\ohosTest"
+        },
+        "BUILD_OPTION": {
+          "debuggable": true
+        }
+      }
+    },
+    "BUILD_OPTION": {
+      "default-default": {
+        "debuggable": true,
+        "copyFrom": "default",
+        "strictMode": {
+          "caseSensitiveCheck": true,
+          "useNormalizedOHMUrl": true
+        },
+        "resOptions": {
+          "copyCodeResource": {
+            "enable": false
+          }
+        },
+        "name": "debug"
+      }
+    },
+    "BUILD_PROFILE_OPT": {
+      "apiType": "stageMode",
+      "buildOption": {
+        "resOptions": {
+          "copyCodeResource": {
+            "enable": false
+          }
+        }
+      },
+      "buildOptionSet": [
+        {
+          "name": "release",
+          "arkOptions": {
+            "obfuscation": {
+              "ruleOptions": {
+                "enable": false,
+                "files": [
+                  "./obfuscation-rules.txt"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "debug"
+        }
+      ],
+      "targets": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "ohosTest"
+        }
+      ]
+    },
+    "BUILD_CACHE_DIR": ""
+  },
+  "ohos-module-collect_personal_info": {
+    "SELECT_TARGET": "default",
+    "MODULE_BUILD_DIR": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build",
+    "TARGETS": {
+      "default": {
+        "SOURCE_ROOT": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\src\\main",
+        "RESOURCES_PATH": [
+          "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\src\\main\\resources"
+        ],
+        "BUILD_PATH": {
+          "OUTPUT_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\outputs\\default",
+          "INTERMEDIA_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates",
+          "JS_ASSETS_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates\\loader_out\\default",
+          "JS_LITE_ASSETS_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates\\loader_out_lite\\default",
+          "RES_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates\\res\\default",
+          "RES_PROFILE_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates\\res\\default\\resources\\base\\profile",
+          "ETS_SUPER_VISUAL_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\cache\\default\\default@HarCompileArkTS\\esmodule",
+          "JS_SUPER_VISUAL_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\cache\\default\\default@HarCompileJS\\jsbundle",
+          "WORKER_LOADER": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates\\loader\\default\\loader.json",
+          "MANIFEST_JSON": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates\\manifest\\default",
+          "OUTPUT_METADATA_JSON": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates\\hap_metadata\\default\\output_metadata.json",
+          "SOURCE_MAP_DIR": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates\\source_map\\default"
+        },
+        "BUILD_OPTION": {
+          "debuggable": true
+        }
+      },
+      "ohosTest": {
+        "SOURCE_ROOT": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\src\\ohosTest",
+        "RESOURCES_PATH": [
+          "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\src\\ohosTest\\resources"
+        ],
+        "BUILD_PATH": {
+          "OUTPUT_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\outputs\\ohosTest",
+          "INTERMEDIA_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates",
+          "JS_ASSETS_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates\\loader_out\\ohosTest",
+          "JS_LITE_ASSETS_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates\\loader_out_lite\\ohosTest",
+          "RES_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates\\res\\ohosTest",
+          "RES_PROFILE_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates\\res\\ohosTest\\resources\\base\\profile",
+          "ETS_SUPER_VISUAL_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\cache\\ohosTest\\ohosTest@OhosTestCompileArkTS\\esmodule",
+          "JS_SUPER_VISUAL_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\cache\\ohosTest\\ohosTest@OhosTestCompileJS\\jsbundle",
+          "WORKER_LOADER": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates\\loader\\ohosTest\\loader.json",
+          "MANIFEST_JSON": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates\\manifest\\ohosTest",
+          "OUTPUT_METADATA_JSON": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates\\hap_metadata\\ohosTest\\output_metadata.json",
+          "SOURCE_MAP_DIR": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info\\build\\default\\intermediates\\source_map\\ohosTest"
+        },
+        "BUILD_OPTION": {
+          "debuggable": true
+        }
+      }
+    },
+    "BUILD_OPTION": {
+      "default-default": {
+        "debuggable": true,
+        "copyFrom": "default",
+        "strictMode": {
+          "caseSensitiveCheck": true,
+          "useNormalizedOHMUrl": true
+        },
+        "name": "debug"
+      }
+    },
+    "BUILD_PROFILE_OPT": {
+      "apiType": "stageMode",
+      "buildOption": {},
+      "buildOptionSet": [
+        {
+          "name": "release",
+          "arkOptions": {
+            "obfuscation": {
+              "ruleOptions": {
+                "enable": false,
+                "files": [
+                  "./obfuscation-rules.txt"
+                ]
+              },
+              "consumerFiles": [
+                "./consumer-rules.txt"
+              ]
+            }
+          }
+        },
+        {
+          "name": "default"
+        },
+        {
+          "name": "debug"
+        }
+      ],
+      "targets": [
+        {
+          "name": "default"
+        },
+        {
+          "name": "ohosTest"
+        }
+      ]
+    },
+    "BUILD_CACHE_DIR": ""
+  },
+  "ohos-project": {
+    "SELECT_PRODUCT_NAME": "default",
+    "MODULE_BUILD_DIR": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\build",
+    "BUNDLE_NAME": "com.tject.myapplication",
+    "VERSION_CODE": 1000000,
+    "VERSION_NAME": "1.0.0",
+    "BUILD_PATH": {
+      "OUTPUT_PATH": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\build\\outputs\\default"
+    },
+    "MODULES": [
+      {
+        "name": "entry",
+        "srcPath": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\entry",
+        "targets": [
+          {
+            "name": "default",
+            "applyToProducts": [
+              "default"
+            ]
+          }
+        ],
+        "belongProjectPath": "C:\\Users\\29093\\Desktop\\Plus\\Pulse"
+      },
+      {
+        "name": "collect_personal_info",
+        "srcPath": "C:\\Users\\29093\\Desktop\\Plus\\Pulse\\utils\\collect_personal_info",
+        "belongProjectPath": "C:\\Users\\29093\\Desktop\\Plus\\Pulse"
+      }
+    ],
+    "PROFILE_OPT": {
+      "app": {
+        "signingConfigs": [
+          {
+            "name": "default",
+            "type": "HarmonyOS",
+            "material": {
+              "certpath": "C:\\Users\\29093\\.ohos\\config\\default_Pulse_1hBrojgPI8ESDJtEDgxHLEhalo_Bl8rmtsLvyDKc7sQ=.cer",
+              "keyAlias": "debugKey",
+              "keyPassword": "0000001B1DDD29244777929A20ABC0CACEC1FD058C729C8CBB3BBA2FE320D2F7E22A7F61CDF015F4EDE74D",
+              "profile": "C:\\Users\\29093\\.ohos\\config\\default_Pulse_1hBrojgPI8ESDJtEDgxHLEhalo_Bl8rmtsLvyDKc7sQ=.p7b",
+              "signAlg": "SHA256withECDSA",
+              "storeFile": "C:\\Users\\29093\\.ohos\\config\\default_Pulse_1hBrojgPI8ESDJtEDgxHLEhalo_Bl8rmtsLvyDKc7sQ=.p12",
+              "storePassword": "0000001BB354E7F3D2A47D14FC43EBE5E3A6CEE19922209FE39BFDF1637774BCE13099B63AD372906FC0D8"
+            }
+          }
+        ],
+        "products": [
+          {
+            "name": "default",
+            "signingConfig": "default",
+            "targetSdkVersion": "6.0.2(22)",
+            "compatibleSdkVersion": "6.0.2(22)",
+            "runtimeOS": "HarmonyOS",
+            "buildOption": {
+              "strictMode": {
+                "caseSensitiveCheck": true,
+                "useNormalizedOHMUrl": true
+              }
+            }
+          }
+        ],
+        "buildModeSet": [
+          {
+            "name": "debug"
+          },
+          {
+            "name": "release"
+          }
+        ],
+        "capabilities": [
+          {
+            "bundleName": "com.tject.myapplication",
+            "config": [
+              {
+                "name": "Map Kit",
+                "capability": "com.huawei.service.mapkit"
+              }
+            ]
+          }
+        ]
+      },
+      "modules": [
+        {
+          "name": "entry",
+          "srcPath": "./entry",
+          "targets": [
+            {
+              "name": "default",
+              "applyToProducts": [
+                "default"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "collect_personal_info",
+          "srcPath": "./utils/collect_personal_info"
+        }
+      ]
+    },
+    "CONFIG_PROPERTIES": {
+      "enableSignTask": true,
+      "skipNativeIncremental": false,
+      "hvigor.keepDependency": true
+    },
+    "OVERALL_PROJECT_PATHS": [
+      "C:\\Users\\29093\\Desktop\\Plus\\Pulse"
+    ],
+    "BUILD_CACHE_DIR": ""
+  }
+}

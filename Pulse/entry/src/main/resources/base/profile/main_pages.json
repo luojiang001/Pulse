@@ -1,0 +1,20 @@
+{
+  "src": [
+    "pages/Main",
+    "pages/LoginView",
+    "pages/component/ShouYe/DoctorDetail",
+    "pages/component/ShouYe/OrderConfirm",
+    "pages/component/Medicine/MedicineDetail",
+    "pages/component/Medicine/MedicineOrderDetail",
+    "pages/component/WoDe/PatientManager",
+    "pages/component/WoDe/PatientAdd",
+    "pages/component/WoDe/Formartion",
+    "pages/component/WoDe/PicPage",
+    "pages/component/WoDe/PrescriptionManager",
+    "pages/component/WoDe/MessageList",
+    "pages/component/WoDe/OrderManager",
+    "pages/component/ShouYe/Chat",
+    "pages/component/ShouYe/MessageList",
+    "pages/component/Medicine/PaymentPage"
+  ]
+}

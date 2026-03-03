@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0e6c7e37-5c06-4898-894a-064e5bc8f58a" name="更改" comment="1">
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/common/Constants.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/Map/FloatingBallMap.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/Medicine/PaymentPage.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/ShouYe/Chat.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/ShouYe/MessageList.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/WoDe/Formartion.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/WoDe/MessageList.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/WoDe/OrderManager.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/WoDe/PicPage.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/WoDe/PrescriptionManager.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/resources/base/media/Component1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/resources/base/media/Component2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/resources/base/media/Component3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/resources/base/media/Component4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/resources/base/media/kefu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/resources/base/media/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/resources/base/media/patient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entry/src/main/resources/base/media/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/BuildProfile.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/Index.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/build-profile.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/consumer-rules.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/hvigorfile.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/obfuscation-rules.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/oh-package.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/screenshots/edit_foldable.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/screenshots/edit_phone.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/screenshots/edit_tablet.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/screenshots/list_foldable.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/screenshots/list_phone.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/screenshots/list_tablet.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/common/ConfigModel.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/common/Constant.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/common/CustomModifier.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/common/DataModel.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/common/ErrorMsgMap.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/common/FormModel.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/common/GridRowColSetting.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/common/Util.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/common/WindowModel.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/components/ChooseAvatar.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/components/ChooseDate.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/components/EnterPhoneNumber.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/components/EnterTextArea.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/components/EnterTextInput.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/components/ImageCropDialog.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/components/SelectDialog.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/viewmodels/PersonalInfoViewVM.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/views/ListCard.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/ets/views/PersonalInfoView.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/module.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/resources/base/element/float.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/resources/base/element/string.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/main/resources/base/profile/route_map.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/ohosTest/ets/test/Ability.test.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/ohosTest/ets/test/List.test.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/ohosTest/module.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/test/List.test.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/collect_personal_info/src/test/LocalUnit.test.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-profile.json5" beforeDir="false" afterPath="$PROJECT_DIR$/build-profile.json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/entryability/EntryAbility.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/entryability/EntryAbility.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/Ai/AI.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/Ai/AI.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/LoginView.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/LoginView.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/Main.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/Main.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/component/Map/MapPage.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/Map/MapPage.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/component/Medicine/Medicine.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/Medicine/Medicine.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/component/Medicine/MedicineCart.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/Medicine/MedicineCart.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/component/Medicine/MedicineDetail.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/Medicine/MedicineDetail.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/component/Medicine/MedicineList.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/Medicine/MedicineList.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/component/Medicine/MedicineOrder.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/Medicine/MedicineOrder.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/component/Medicine/MedicineOrderDetail.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/Medicine/MedicineOrderDetail.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/component/RegisterDialog.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/RegisterDialog.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/component/ShouYe/DepartmentGridComponent.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/ShouYe/DepartmentGridComponent.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/component/ShouYe/DoctorDetail.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/ShouYe/DoctorDetail.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/component/ShouYe/DoctorListComponent.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/ShouYe/DoctorListComponent.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/component/ShouYe/HomeHeaderComponent.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/ShouYe/HomeHeaderComponent.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/component/WoDe/PatientAdd.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/WoDe/PatientAdd.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/component/WoDe/PatientManager.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/WoDe/PatientManager.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/component/WoDe/WoDe.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/component/WoDe/WoDe.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/data/Data.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/data/Data.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/ets/pages/utils/StorageUtil.ets" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/ets/pages/utils/StorageUtil.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/module.json5" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/module.json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/resources/base/media/Rectanglel.png" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/resources/base/media/Rectanglel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/resources/base/media/Rectangler.png" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/resources/base/media/Rectangler.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/resources/base/media/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/resources/base/media/background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/resources/base/media/foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/resources/base/media/foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/resources/base/media/l3.png" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/resources/base/media/l3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/resources/base/media/r2.png" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/resources/base/media/r2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/resources/base/media/startIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/resources/base/media/startIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entry/src/main/resources/base/profile/main_pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/entry/src/main/resources/base/profile/main_pages.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oh-package-lock.json5" beforeDir="false" afterPath="$PROJECT_DIR$/oh-package-lock.json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oh-package.json5" beforeDir="false" afterPath="$PROJECT_DIR$/oh-package.json5" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Index" />
+        <option value="ArkTS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HiLogStateProjectLevelPreference">
+    <panelStates>
+      <hilogPanelState>
+        <option name="filterName" value="No filters" />
+        <option name="logPanelType" value="ONLINE" />
+      </hilogPanelState>
+    </panelStates>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="proportion" value="0.5900963" />
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="38YvYoEn9JYc2Y7oaHDJZQqiJ4h" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "127.0.0.1:5555": "5372001841770261425019",
+    "3XEBB24714202556": "5378342591769830489485",
+    "Application.entry.executor": "Run",
+    "Apply Changes.entry.executor": "Run",
+    "MODULE_HAP_TIME": "{\"3XEBB24714202556entry\":\"2026-01-31T03:34:48.693932300Z\",\"127.0.0.1:5555entry\":\"2026-02-05T03:17:03.028222600Z\"}",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "ace.nodejs.version": "18.20.1",
+    "auto_debug_bundleName": "00000027A6ACC44104DA6FA01A9E14F08B022040B577BC5B97F592BF8A0F7B7992AAE4B7093A61766A2DE68C6EE50C00970DFBACB6A07F",
+    "auto_debug_cert_list": "000000233217F0FF0D59644A6A425B81F220BE6A6685CD122A005BA959A22D213A0E4EF4DA610EAE52A91DC1ADD2C1D41776E3",
+    "auto_debug_device_list": "00000037D8DC3262E6C9AA4F18F58CC7E3490694733EEE473803983165F5CEDF0920A001E143782809204429C99DE6F43B35017233397253B50CCC9B16049E86795677B768E2AB",
+    "auto_debug_package_name": "000000271B8F1FC78DA1EAEE9EE9AE6D8D0D063A43B0D3E430EAE3B35EA0AA4193ECA43F25A84626CEEDD1AFF99274B0C64B47A6D63147",
+    "auto_debug_team_id": "000000218CA03E6A776F0E9CB1482C1423AA6544BEF12E11C38D62F701BE5B4A7479AE37089CE3CB51CF36694CE4C38872",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/29093/Desktop/Plus/Pulse/entry/src/main/resources/base/media",
+    "projectSizeLastTraceTimestamp-5112a2fe5889e909de1f3e5b02c30d4eb2b2175dc5f6470568dcedc377e5": "1769610406247",
+    "projectSizeLastTraceTimestamp-5fb7b446992534c8175e1cba2def4f99be02924544f0afaec20721f43724": "1770256385397",
+    "projectSizeLastTraceTimestamp-8709a1c91276d96a270c330c56ac2d2c1c0b9f718868eca87a5d5310b664": "1768998058955",
+    "projectSizeLastTraceTimestamp-f9bb0fe45ef19fa967b970936f53cd8a4963bdb32fc0405f2beb2b3fb619": "1772535545149",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  },
+  "keyToStringList": {
+    "reqPermissions": []
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\29093\Desktop\Plus\Pulse\entry\src\main\resources\base\media" />
+      <recent name="C:\Users\29093\Desktop\Pulse\entry\src\main\resources\base\media" />
+      <recent name="D:\Deveco\Project\Pulse\entry\src\main\resources\rawfile\Pulse\Common" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\29093\Desktop\Plus\Pulse\entry\src\main\resources\base\media" />
+      <recent name="C:\Users\29093\Desktop\Plus\Pulse\entry\src\main\ets\pages\component\ShouYe" />
+      <recent name="C:\Users\29093\Desktop\Pulse\utils" />
+      <recent name="C:\Users\29093\Desktop\Pulse\entry\src\main\resources" />
+      <recent name="C:\Users\29093\Desktop\Pulse\entry\src\main\resources\base\media" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.entry">
+    <configuration name="entry" type="HotReLoadTask" factoryName="Hot Reload">
+      <MODULE_NAME />
+      <REINSTALL_APPLICATION>true</REINSTALL_APPLICATION>
+      <ENVIRONMENT_VARIABLES>[]</ENVIRONMENT_VARIABLES>
+      <DEBUG_LINE_ENABLE_DATA>false</DEBUG_LINE_ENABLE_DATA>
+      <AUTO_DEPENDENCIES_DATA>true</AUTO_DEPENDENCIES_DATA>
+      <WEB_VIEW_DEBUG>false</WEB_VIEW_DEBUG>
+      <INSTALL_FLAGS_CONFIG_KEY />
+      <LAUNCH_FLAGS_CONFIG_KEY />
+      <LAUNCH_ABILITY_CONFIG_TYPE>Default Ability</LAUNCH_ABILITY_CONFIG_TYPE>
+      <LAUNCH_ABILITY_CONFIG_VALUE />
+      <SYMBOL_DIRS>[]</SYMBOL_DIRS>
+      <DEBUGGER_TYPE>Detect Automatically</DEBUGGER_TYPE>
+      <MULTI_HAP_MODULE_DATA>[]</MULTI_HAP_MODULE_DATA>
+      <SHOW_STATIC_VARIABLES>true</SHOW_STATIC_VARIABLES>
+      <LOGGING_TARGET_CHANNELS>lldb process:gdb-remote packets</LOGGING_TARGET_CHANNELS>
+      <USER_POST_ATTACH_COMMANDS>[]</USER_POST_ATTACH_COMMANDS>
+      <USER_STARTUP_COMMANDS>[]</USER_STARTUP_COMMANDS>
+      <ETS_SOURCE_PARIS>[]</ETS_SOURCE_PARIS>
+      <DEPLOY_MULTI_HAP>false</DEPLOY_MULTI_HAP>
+      <ALL_MODULES>false</ALL_MODULES>
+      <ASAN_ENABLE_DATA>false</ASAN_ENABLE_DATA>
+      <TSAN_ENABLE_DATA>false</TSAN_ENABLE_DATA>
+      <ERROR_INFO_ENHANCE_ENABLE_DATA>false</ERROR_INFO_ENHANCE_ENABLE_DATA>
+      <MULTI_THREAD_CHECK_SELECTED_DATA>false</MULTI_THREAD_CHECK_SELECTED_DATA>
+      <UBSAN_ENABLE_DATA>false</UBSAN_ENABLE_DATA>
+      <HWASAN_ENABLE_DATA>false</HWASAN_ENABLE_DATA>
+      <BLACK_COVERAGE_ENABLE_DATA>false</BLACK_COVERAGE_ENABLE_DATA>
+      <HOT_RELOAD_MODULE_NAME>entry</HOT_RELOAD_MODULE_NAME>
+      <method v="2">
+        <option name="Build.Hvigor.HotReloadBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Pulse [assembleDevHqf]" type="HvigorRunConfiguration" factoryName="HvigorRunConfiguration" temporary="true">
+      <option name="applicationParameters" value="--mode module -p module=entry@default -p product=default -p ohos-enable-hwasan=false -p requiredDeviceType=phone -p ohos-enable-ubsan=false assembleDevHqf --analyze=normal --parallel --incremental" />
+      <option name="nodeInterpreter" value="$PROJECT_DIR$/../../../../Program Files/Huawei/DevEco Studio1\tools\node" />
+      <option name="scriptFile" value="$PROJECT_DIR$/../../../../Program Files/Huawei/DevEco Studio1\tools\hvigor\bin\hvigorw.js" />
+      <option name="workingDir" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Pulse [clean]" type="HvigorRunConfiguration" factoryName="HvigorRunConfiguration" temporary="true">
+      <option name="applicationParameters" value=" -p product=default clean --analyze=normal --parallel --incremental" />
+      <option name="nodeInterpreter" value="$PROJECT_DIR$/../../../../../Program Files/Huawei/DevEco Studio1\tools\node" />
+      <option name="scriptFile" value="$PROJECT_DIR$/../../../../../Program Files/Huawei/DevEco Studio1\tools\hvigor\bin\hvigorw.js" />
+      <option name="workingDir" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Pulse [clean,assembleHap]" type="HvigorRunConfiguration" factoryName="HvigorRunConfiguration" temporary="true">
+      <option name="applicationParameters" value="clean --mode module -p product=default assembleHap --analyze=normal --parallel --incremental" />
+      <option name="nodeInterpreter" value="$PROJECT_DIR$/../../../../../Program Files/Huawei/DevEco Studio1\tools\node" />
+      <option name="scriptFile" value="$PROJECT_DIR$/../../../../../Program Files/Huawei/DevEco Studio1\tools\hvigor\bin\hvigorw.js" />
+      <option name="workingDir" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="entry" type="OhosDebugTask" factoryName="OpenHarmony App">
+      <MODULE_NAME>entry</MODULE_NAME>
+      <REINSTALL_APPLICATION>true</REINSTALL_APPLICATION>
+      <ENVIRONMENT_VARIABLES>[]</ENVIRONMENT_VARIABLES>
+      <DEBUG_LINE_ENABLE_DATA>false</DEBUG_LINE_ENABLE_DATA>
+      <AUTO_DEPENDENCIES_DATA>true</AUTO_DEPENDENCIES_DATA>
+      <WEB_VIEW_DEBUG>false</WEB_VIEW_DEBUG>
+      <INSTALL_FLAGS_CONFIG_KEY />
+      <LAUNCH_FLAGS_CONFIG_KEY />
+      <LAUNCH_ABILITY_CONFIG_TYPE>Default Ability</LAUNCH_ABILITY_CONFIG_TYPE>
+      <LAUNCH_ABILITY_CONFIG_VALUE />
+      <SYMBOL_DIRS>[]</SYMBOL_DIRS>
+      <DEBUGGER_TYPE>Detect Automatically</DEBUGGER_TYPE>
+      <MULTI_HAP_MODULE_DATA>[]</MULTI_HAP_MODULE_DATA>
+      <SHOW_STATIC_VARIABLES>true</SHOW_STATIC_VARIABLES>
+      <LOGGING_TARGET_CHANNELS>lldb process:gdb-remote packets</LOGGING_TARGET_CHANNELS>
+      <USER_POST_ATTACH_COMMANDS>[]</USER_POST_ATTACH_COMMANDS>
+      <USER_STARTUP_COMMANDS>[]</USER_STARTUP_COMMANDS>
+      <ETS_SOURCE_PARIS>[]</ETS_SOURCE_PARIS>
+      <DEPLOY_MULTI_HAP>false</DEPLOY_MULTI_HAP>
+      <ALL_MODULES>false</ALL_MODULES>
+      <ASAN_ENABLE_DATA>false</ASAN_ENABLE_DATA>
+      <TSAN_ENABLE_DATA>false</TSAN_ENABLE_DATA>
+      <ERROR_INFO_ENHANCE_ENABLE_DATA>false</ERROR_INFO_ENHANCE_ENABLE_DATA>
+      <MULTI_THREAD_CHECK_SELECTED_DATA>false</MULTI_THREAD_CHECK_SELECTED_DATA>
+      <UBSAN_ENABLE_DATA>false</UBSAN_ENABLE_DATA>
+      <HWASAN_ENABLE_DATA>false</HWASAN_ENABLE_DATA>
+      <BLACK_COVERAGE_ENABLE_DATA>false</BLACK_COVERAGE_ENABLE_DATA>
+      <method v="2">
+        <option name="Build.Hvigor.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Hvigor.Pulse [clean]" />
+        <item itemvalue="Hvigor.Pulse [clean,assembleHap]" />
+        <item itemvalue="Hvigor.Pulse [clean]" />
+        <item itemvalue="Hvigor.Pulse [clean,assembleHap]" />
+        <item itemvalue="Hvigor.Pulse [clean]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用级" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Luo Jiang\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <MESSAGE value="add" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
+  </component>
+</project>

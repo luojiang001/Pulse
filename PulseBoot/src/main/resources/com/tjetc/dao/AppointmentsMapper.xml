@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjetc.dao.AppointmentsMapper">
+  <resultMap id="BaseResultMap" type="com.tjetc.domain.Appointments">
+    <!--@mbg.generated-->
+    <!--@Table appointments-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="doctor_id" jdbcType="INTEGER" property="doctorId" />
+    <result column="schedule_time_id" jdbcType="BIGINT" property="scheduleTimeId" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="amount" jdbcType="DECIMAL" property="amount" />
+    <result column="created_at" jdbcType="TIMESTAMP" property="createdAt" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, user_id, doctor_id, schedule_time_id, `status`, amount, created_at
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from appointments
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    <!--@mbg.generated-->
+    delete from appointments
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.tjetc.domain.Appointments" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into appointments (user_id, doctor_id, schedule_time_id, 
+      `status`, amount, created_at
+      )
+    values (#{userId,jdbcType=INTEGER}, #{doctorId,jdbcType=INTEGER}, #{scheduleTimeId,jdbcType=BIGINT}, 
+      #{status,jdbcType=TINYINT}, #{amount,jdbcType=DECIMAL}, #{createdAt,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.tjetc.domain.Appointments" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into appointments
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="doctorId != null">
+        doctor_id,
+      </if>
+      <if test="scheduleTimeId != null">
+        schedule_time_id,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="amount != null">
+        amount,
+      </if>
+      <if test="createdAt != null">
+        created_at,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="doctorId != null">
+        #{doctorId,jdbcType=INTEGER},
+      </if>
+      <if test="scheduleTimeId != null">
+        #{scheduleTimeId,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="amount != null">
+        #{amount,jdbcType=DECIMAL},
+      </if>
+      <if test="createdAt != null">
+        #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tjetc.domain.Appointments">
+    <!--@mbg.generated-->
+    update appointments
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="doctorId != null">
+        doctor_id = #{doctorId,jdbcType=INTEGER},
+      </if>
+      <if test="scheduleTimeId != null">
+        schedule_time_id = #{scheduleTimeId,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="amount != null">
+        amount = #{amount,jdbcType=DECIMAL},
+      </if>
+      <if test="createdAt != null">
+        created_at = #{createdAt,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tjetc.domain.Appointments">
+    <!--@mbg.generated-->
+    update appointments
+    set user_id = #{userId,jdbcType=INTEGER},
+      doctor_id = #{doctorId,jdbcType=INTEGER},
+      schedule_time_id = #{scheduleTimeId,jdbcType=BIGINT},
+      `status` = #{status,jdbcType=TINYINT},
+      amount = #{amount,jdbcType=DECIMAL},
+      created_at = #{createdAt,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

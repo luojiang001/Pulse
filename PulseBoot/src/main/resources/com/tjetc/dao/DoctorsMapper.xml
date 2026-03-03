@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjetc.dao.DoctorsMapper">
+  <resultMap id="BaseResultMap" type="com.tjetc.domain.Doctors">
+    <!--@mbg.generated-->
+    <!--@Table doctors-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="department" jdbcType="VARCHAR" property="department" />
+    <result column="specialty" jdbcType="VARCHAR" property="specialty" />
+    <result column="rating" jdbcType="DOUBLE" property="rating" />
+    <result column="price" jdbcType="DOUBLE" property="price" />
+    <result column="image" jdbcType="VARCHAR" property="image" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, `name`, title, department, specialty, rating, price, image
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from doctors
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from doctors
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+
+  <resultMap id="DoctorScheduleInfoResultMap" type="com.tjetc.vo.DoctorScheduleInfoVO">
+    <id column="id" jdbcType="INTEGER" property="id"/>
+    <result column="name" jdbcType="VARCHAR" property="name"/>
+    <result column="title" jdbcType="VARCHAR" property="title"/>
+    <result column="department" jdbcType="VARCHAR" property="department"/>
+    <result column="specialty" jdbcType="VARCHAR" property="specialty"/>
+    <result column="rating" jdbcType="DOUBLE" property="rating"/>
+    <result column="price" jdbcType="DOUBLE" property="price"/>
+    <result column="image" jdbcType="VARCHAR" property="image"/>
+
+    <result column="work_date" jdbcType="DATE" property="workDate"/>
+    <result column="time_period" jdbcType="VARCHAR" property="timePeriod"/>
+    <result column="is_available" jdbcType="TINYINT" property="isAvailable"/>
+    <result column="available_count" jdbcType="INTEGER" property="availableCount"/>
+    <result column="room_name" jdbcType="VARCHAR" property="roomName"/>
+  </resultMap>
+
+
+  <select id="selectDoctorWithSchedule" resultMap="DoctorScheduleInfoResultMap">
+    SELECT
+    d.id, d.name, d.title, d.department, d.specialty, d.rating, d.price, d.image,
+    ds.work_date, ds.time_period, ds.is_available, ds.available_count, ds.room_name
+    FROM doctors d
+    LEFT JOIN doctor_schedule_slots ds ON d.id = ds.doctor_id
+    WHERE 1=1
+    <if test='query != null and query.name != null and query.name != ""'>
+      AND d.name LIKE CONCAT('%', #{query.name}, '%')
+    </if>
+    <if test='query != null and query.department != null and query.department != ""'>
+      AND d.department = #{query.department}
+    </if>
+    <if test='query != null and query.specialty != null and query.specialty != ""'>
+      AND d.specialty = #{query.specialty}
+    </if>
+    <if test='query != null and query.title != null and query.title != ""'>
+      AND d.title = #{query.title}
+    </if>
+    <if test='scheduleDate != null'>
+      AND ds.work_date = #{scheduleDate}
+    </if>
+  </select>
+
+
+</mapper>

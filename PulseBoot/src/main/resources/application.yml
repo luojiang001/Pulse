@@ -1,0 +1,64 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.101.196.181:3306/hmxm?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    username: hmxm
+    password: 123456
+  data:
+    redis:
+      host: 47.101.196.181
+      port: 6379
+      password: 123456
+  rabbitmq:
+    host: 47.101.196.181    # 替换为你的MQ服务器IP
+    port: 5672             # 若修改过端口，替换为实际端口（如 5673）
+    username: admin        # 替换为你创建的远程访问账号（guest仅本地可用）
+    password: admin       # 替换为账号密码
+    virtual-host: bthost
+  elasticsearch:
+    uris: http://192.168.128.100:9200
+  ai:
+    ollama:
+      base-url: http://192.168.140.166:11434
+      chat:
+        model: deepseek-r1:7b
+    openai:
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/
+      api-key: sk-998301b6d9794f88861befd502920d61
+      chat:
+        options:
+          model: qwen-max-latest
+          temperature: 0.7
+          max-tokens: 2048
+      embedding:
+        options:
+          model: text-embedding-v3
+          dimensions: 1024
+  main:
+    allow-bean-definition-overriding: true
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    com.tjetc.dao: debug
+    org.springframework.ai.chat.client.advisor: debug
+
+minio:
+  endpoint: http://47.101.196.181:9000 #minio服务所在地址
+  bucketName: department-grid #存储桶名称
+  accessKey: xxx
+  secretKey: xxxxxxxx
+
+alipay:
+  appId: 9021000159673485
+  alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArjH7onuUeMv6QiaUh79n0bEliVqmr4dx1aa72jrZaZcWk/j815A/fJHtJi1BD3VEOz2WmJYUU/N9d56HaWBALAivL5oXHXgGf1GENaspCu5tPC5SpslmuEwG6vizNesJ9LE6UtIbCDdWYoHoL5mMlpYa8mJoe66M/3okIDyMkqJVXN6K+W4dWkyrP/+zjbgxPgg5t+HUgT2mWLCdvQoo9jwfGNf+Zjvd2h0NO25/1p1NcS2yPYmbubkjqZ/6mdL4I/NrbT2VKDBTQpllIxILeNaJNIUpPva6fP/NpfvmZlg1Uwi8T2dNbTAINbxz8eZaDxv8/z3qcWf31tX1yE2IwQIDAQAB
+  notifyUrl: http://x5ea8988.natappfree.cc/alipay/notify
+  signType: RSA2
+  charset: utf-8
+  gatewayUrl: https://openapi-sandbox.dl.alipaydev.com/gateway.do
+  app-private-key: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCllx9bUxPfZGGDFm7cHD+BnZ7uXsk2AEAvGVSn73FJtJA0Jrtc6w5Ds+5Yt0LmZ438iYHffBN1tCnb1sVPk6WOY33/LFthhcdgcQ4reKiPOYqQpmPvTEIMj3JhoAYyum5s0Qyrn2D+mLGNX60mlE9H8XUafVUUPmxMIzpnuaVYDSTip30V15zLGGk8R2nBG4nAmQE5W9HIjcK6zFRqY3KGM7aJgun87W00s9r5w3TKwy8bwdWVplKyF6sBLklR1nVmlK5cLg0jWQi1iyfn2wSTPUBcddXzkSxhEjPgpos7Ksl89cOO34FleT7PR5du3AetINGcr7RtF7oBPWJiowbFAgMBAAECggEAGJT7qbIGlDYxp6Uv5esnnlVI37gghKy62oMXJysLlVaBxcwuKlgWsQRIENF70/pxgJjlN8kSlnmdcS5L8klH3YB1luj909dpRq7h3KA33bM8F8crtL2MXJL69vUrlmJIvEy4Zc3uNz1xtjwK11xS/KoiqUEL3Up7Bz5/kCBmJFDqE2s6QIXKjHikfQUG0sbz1fGI9o1ooC0dMDcZndDaKdeX4FY5qRnCGxOxZNR9QZ8OAxMHCeYYuXYQESiTBdEfkbY9/2YF0QemOytouD8E3txVXpLciunTn7u8WXaSkQev3YGivmejtuk1PlybKJjVKBvmT7GAyt0F+mrVF5T2TQKBgQDQYHQNCBmJc7WIeBYQKi/82237KcO8eXTFpxsEBz67M9iedhR2jU0nFYTEXhIS8CNnDOxMLlAyW5yqJiJYTm35ArihjRUbzj7dWiCh63yL41kfnneqfqeMEQvYrI2U6n/+gjsh8yBdSsBYoSJZWj3tcQ4wfit1FB0mVLuhu2k17wKBgQDLb1pPkEfSmrCpGMaaFoti4DzdzLJJUIZ+edvXI4hJDTYhrpjXZBBIhUi0clTxLa+15gWApLHqkMUCFie/5x4kKqjubUPNElVraGya4zG8ckltXkk86H8LSW/lV4sUy85EA7cFEh5/G1sWw/nkIxcLPNxVnIIup8qWAQ5G/zciiwKBgQCuhWoNFBCXT4LmBnWsGjlQ1NMbPdKDA1JqzFdTG2JN1dGCfjELTbMlnd8xu/v1QozUHT23XD6svo/K7d9sCFwQ51eNbqUUQbvjFj4ofxsz6jjVw5pEAIoBRLGgSnzWEUUb+yTdfUxI9nd8g5BKN8uQF1UkBjgNecgkN2livp0SnwKBgQC6TNpmvJmZm8ImySKvX+/796Cl+lxXWaAhWRVjmw2m4KtvAwbDUca7sxuW7JEvYQhlyyXE3o50YmmYdJOoYU4wDsUvu+54cc66EyJKYb9ddUgbGVp2pfAadQE9BQPAYrgdf01vHl3BR1sOqSBCtYPX7b9Vw4NQmKak4oihqf1i6wKBgBWzDj/DD8SF6CaNH/g4JONBQ2Mz+j2fS0HWC/QcjMA/VbLI3z2lswh1nUDVcbfb6C5uUfUBJZgJRtPosYw60ZD1LCNbMp/iuAKx0pzaWqceJNP6UBzLbdoWupyAwZ8cKTgef5HKnomuBr5I/4DAUoYXDGGtwLaZ93/v6bfvpKg3
+
+
+
+

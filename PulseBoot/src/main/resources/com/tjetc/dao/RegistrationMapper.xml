@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tjetc.dao.RegistrationMapper">
+
+    <resultMap id="MedicineItemResultMap" type="com.tjetc.domain.MedicineItem">
+        <result column="medicineName" property="medicineName"/>
+        <result column="count" property="count"/>
+        <result column="usedCount" property="usedCount"/>
+        <result column="prescription" property="prescription"/>
+    </resultMap>
+
+    <resultMap id="prescriptionVO" type="com.tjetc.vo.PrescriptionVO">
+        <id column="pid" property="id"/>
+        <result column="doctorName" property="doctorName"/>
+        <result column="department" property="department"/>
+        <result column="time" property="time"/>
+        <result column="status" property="status"/>
+        <result column="createTime" property="createTime"/>
+        <result column="diagnosis" property="diagnosis"/>
+        <collection property="medicines" resultMap="MedicineItemResultMap"/>
+    </resultMap>
+
+    <resultMap id="RegistrationResultMap" type="com.tjetc.vo.Registration">
+        <id column="id" property="id"/>
+        <result column="reg_no" property="regNo"/>
+        <result column="name" property="name"/>
+        <result column="age" property="age"/>
+        <result column="gender" property="gender"/>
+        <result column="department" property="department"/>
+        <result column="schedule_date" property="scheduleDate"/>
+        <result column="schedule_time" property="scheduleTime"/>
+        <result column="create_time" property="createTime"/>
+        <result column="visit_status" property="visitStatus"/>
+        <result column="payStatus" property="payStatus"/>
+        <result column="amount" property="amount"/>
+        <association property="doctor" column="doctor_id" select="com.tjetc.dao.DoctorsMapper.selectById" fetchType="eager"/>
+    </resultMap>
+
+    <resultMap id="RegistrationRecordMap" type="com.tjetc.domain.RegistrationRecord">
+        <id column="id" property="id"/>
+        <result column="user_id" property="userId"/>
+        <result column="patient_id" property="patientId"/>
+        <result column="doctor_id" property="doctorId"/>
+        <result column="schedule_date" property="scheduleDate"/>
+        <result column="schedule_time" property="scheduleTime"/>
+        <result column="amount" property="amount"/>
+        <result column="status" property="status"/>
+        <result column="create_time" property="createTime"/>
+        <result column="visit_status" property="visitStatus"/>
+        <result column="reg_no" property="regNo"/>
+    </resultMap>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO registration_record(user_id, patient_id, doctor_id, schedule_date, schedule_time, amount, status,reg_no)
+        VALUES(#{userId}, #{patientId}, #{doctorId}, #{scheduleDate}, #{scheduleTime}, #{amount}, #{status},#{regNo} )
+    </insert>
+
+    <update id="update" parameterType="com.tjetc.vo.Registration">
+        update registration_record
+        <set>
+            <if test="doctor != null and doctor.id != null">
+                doctor_id = #{doctor.id},
+            </if>
+            <if test="scheduleDate != null">
+                schedule_date = #{scheduleDate},
+            </if>
+            <if test="scheduleTime != null">
+                schedule_time = #{scheduleTime},
+            </if>
+            <if test="amount != 0">
+                amount = #{amount},
+            </if>
+            <if test="payStatus != null">
+                status = #{payStatus},
+            </if>
+            <if test="visitStatus != null">
+                visit_status = #{visitStatus},
+            </if>
+        </set>
+        where reg_no = #{regNo}
+    </update>
+
+    <update id="updateDoctorForSchedule" parameterType="com.tjetc.vo.Registration">
+        UPDATE registration_record SET doctor_id = #{toDoctorId}
+        WHERE doctor_id = #{fromDoctorId}
+        AND schedule_date = #{date}
+        AND schedule_time IN
+        <foreach item='item' collection='periods' open='(' separator=',' close=')'>
+            #{item}
+        </foreach>
+    </update>
+
+    <select id="selectRegistrationWithDoctor" resultMap="RegistrationResultMap">
+        select rr.id,
+               rr.reg_no,
+               pa.name,
+               pa.age,
+               pa.gender,
+               do.department,
+               rr.schedule_date,
+               rr.schedule_time,
+               rr.create_time,
+               rr.visit_status,
+               rr.status as payStatus,
+               rr.amount,
+               rr.doctor_id as doctor_id
+        from registration_record as rr
+                 join users as us on rr.user_id = us.id
+                 join patients as pa on rr.patient_id = pa.id
+                 join doctors as do on rr.doctor_id = do.id
+        where rr.id = #{id}
+    </select>
+
+    <select id="list" resultMap="RegistrationResultMap">
+        select rr.id,
+        rr.reg_no,
+        pa.name,
+        pa.age,
+        pa.gender,
+        do.department,
+        rr.schedule_date,
+        rr.schedule_time,
+        rr.create_time,
+        rr.visit_status,
+        rr.status as payStatus,
+        rr.amount,
+        rr.doctor_id as doctor_id
+        from registration_record as rr
+        join users as us on rr.user_id = us.id
+        join patients as pa on rr.patient_id = pa.id
+        join doctors as do on rr.doctor_id = do.id
+        where pa.name like concat('%',#{name},'%')
+        <if test="doctorId != null">
+            and rr.doctor_id = #{doctorId}
+        </if>
+        order by rr.id
+    </select>
+
+    <select id="selectByRegNo" resultMap="RegistrationRecordMap">
+        SELECT * FROM registration_record WHERE reg_no = #{regNo}
+    </select>
+
+    <select id="selectVOByRegNo" resultMap="RegistrationResultMap">
+        select rr.id,
+               rr.reg_no,
+               pa.name,
+               pa.age,
+               pa.gender,
+               do.department,
+               rr.schedule_date,
+               rr.schedule_time,
+               rr.create_time,
+               rr.visit_status,
+               rr.status as payStatus,
+               rr.amount,
+               rr.doctor_id as doctor_id
+        from registration_record as rr
+                 join users as us on rr.user_id = us.id
+                 join patients as pa on rr.patient_id = pa.id
+                 join doctors as do on rr.doctor_id = do.id
+        where rr.reg_no = #{regNo}
+    </select>
+
+    <select id="countMissedAppointments" resultType="int">
+        SELECT count(*) FROM registration_record WHERE user_id = #{userId} AND visit_status = 3 AND create_time >= #{startDate}
+    </select>
+
+    <select id="findAll" resultMap="RegistrationResultMap">
+        select rr.id,
+               rr.reg_no,
+               pa.name,
+               pa.age,
+               pa.gender,
+               do.department,
+               rr.schedule_date,
+               rr.schedule_time,
+               rr.create_time,
+               rr.visit_status,
+               rr.status as payStatus,
+               rr.amount,
+               rr.doctor_id as doctor_id
+        from registration_record as rr
+                 join users as us on rr.user_id = us.id
+                 join patients as pa on rr.patient_id = pa.id
+                 join doctors as do on rr.doctor_id = do.id
+        order by rr.id
+    </select>
+
+    <select id="findByDoctorId" resultMap="RegistrationResultMap">
+        select rr.id,
+               rr.reg_no,
+               pa.name,
+               pa.age,
+               pa.gender,
+               do.department,
+               rr.schedule_date,
+               rr.schedule_time,
+               rr.create_time,
+               rr.visit_status,
+               rr.status as payStatus,
+               rr.amount,
+               rr.doctor_id as doctor_id
+        from registration_record as rr
+                 join users as us on rr.user_id = us.id
+                 join patients as pa on rr.patient_id = pa.id
+                 join doctors as do on rr.doctor_id = do.id
+        where rr.doctor_id = #{doctorId}
+        order by rr.id
+    </select>
+
+    <select id="findByDoctorIdAndDate" resultMap="RegistrationResultMap">
+        select rr.id,
+               rr.reg_no,
+               pa.name,
+               pa.age,
+               pa.gender,
+               do.department,
+               rr.schedule_date,
+               rr.schedule_time,
+               rr.create_time,
+               rr.visit_status,
+               rr.status as payStatus,
+               rr.amount,
+               rr.doctor_id as doctor_id
+        from registration_record as rr
+                 join users as us on rr.user_id = us.id
+                 join patients as pa on rr.patient_id = pa.id
+                 join doctors as do on rr.doctor_id = do.id
+        where rr.doctor_id = #{doctorId}
+          and rr.schedule_date = #{date}
+        order by rr.id
+    </select>
+
+    <update id="updateVisitStatus">
+        update registration_record set visit_status=#{visitStatus} where reg_no=#{regNo}
+    </update>
+
+    <select id="getRecordList" resultType="com.tjetc.vo.RegistrationRecordVO">
+        SELECT
+            r.reg_no AS id,
+            d.name AS doctorName,
+            d.department AS department,
+            CONCAT(r.schedule_date, ' ', r.schedule_time) AS time,
+            (UNIX_TIMESTAMP(r.create_time) * 1000) AS createTime,
+            CASE
+                WHEN r.visit_status IN (0, 1) THEN 'upcoming'
+                WHEN r.visit_status = 2 THEN 'completed'
+                WHEN r.visit_status = 3 THEN 'cancelled'
+                ELSE 'upcoming'
+                END AS status,
+             r.doctor_id AS doctorId,
+             d.image AS doctorAvatar
+        FROM registration_record r
+                 LEFT JOIN doctors d ON r.doctor_id = d.id
+        WHERE r.user_id = #{userId}
+        ORDER BY r.create_time DESC
+    </select>
+
+    <delete id="del">
+        delete from registration_record where reg_no=#{regNo}
+    </delete>
+
+    <select id="findByRegNo" resultMap="prescriptionVO">
+        SELECT
+            p.id AS pid,
+            d.name AS doctorName,
+            d.department,
+            CONCAT(rr.schedule_date, ' ', rr.schedule_time) AS time,
+            CASE WHEN p.id IS NOT NULL THEN '已开方' ELSE '待开方' END AS status,
+            UNIX_TIMESTAMP(p.create_time) * 1000 AS createTime,
+            p.msg AS diagnosis,
+            m.name AS medicineName,
+            pm.count,
+            pm.used_count AS usedCount,
+            m.prescription
+        FROM registration_record rr
+                 JOIN doctors d ON rr.doctor_id = d.id
+                 LEFT JOIN prescription p ON rr.id = p.registration_id
+                 LEFT JOIN prescription_mediclie pm ON p.id = pm.prescription_id
+                 LEFT JOIN medicine m ON pm.medicine_id = m.id
+        WHERE rr.reg_no = #{regNo}
+    </select>
+</mapper>

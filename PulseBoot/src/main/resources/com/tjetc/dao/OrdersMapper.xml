@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tjetc.dao.OrdersMapper">
+
+    <resultMap id="OrderWithItemsMap" type="com.tjetc.domain.Orders">
+        <id property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="totalAmount" column="total_amount"/>
+        <result property="status" column="status"/>
+        <result property="createTime" column="create_time"/>
+        <result property="payMethod" column="pay_method"/>
+        <collection property="items" ofType="com.tjetc.domain.OrderItem">
+            <id property="id" column="item_id"/>
+            <result property="orderId" column="id"/>
+            <result property="medicineId" column="medicine_id"/>
+            <result property="name" column="item_name"/>
+            <result property="price" column="item_price"/>
+            <result property="quantity" column="quantity"/>
+            <result property="image" column="image"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectById" resultMap="OrderWithItemsMap">
+        SELECT
+            o.id,
+            o.user_id,
+            o.total_amount,
+            o.status,
+            o.create_time,
+            o.pay_method,
+            o.pay_time,
+            oi.id AS item_id,
+            oi.medicine_id,
+            oi.name AS item_name,
+            oi.price AS item_price,
+            oi.quantity,
+            oi.image
+        FROM orders o
+                 LEFT JOIN order_item oi ON o.id = oi.order_id
+        WHERE o.id = #{id}
+    </select>
+
+    <select id="page" resultType="com.tjetc.domain.Orders">
+        SELECT * FROM orders WHERE 1=1
+        <if test='searchId != null and searchId != ""'>
+            AND id LIKE CONCAT('%', #{searchId}, '%')
+        </if>
+        <if test='status != null and status != ""'>
+            AND status = #{status}
+        </if>
+    </select>
+    <update id="updateById">
+        UPDATE orders
+        SET
+            status = #{status},
+            pay_time = #{payTime}
+        WHERE id = #{id}
+    </update>
+</mapper>

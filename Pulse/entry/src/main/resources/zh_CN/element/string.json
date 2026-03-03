@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "模块描述"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "描述"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "标签"
+    },
+    {
+      "name": "location_reason",
+      "value": "用于在地图上显示您的当前位置以提供导航服务。"
+    }
+  ]
+}

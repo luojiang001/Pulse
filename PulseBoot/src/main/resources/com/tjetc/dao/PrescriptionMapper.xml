@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tjetc.dao.PrescriptionMapper">
+    <resultMap id="MedicineItemResultMap" type="com.tjetc.domain.MedicineItem">
+        <result column="medicineName" property="medicineName"/> <!-- SQL 列 → MedicineItem 属性 -->
+        <result column="count" property="count"/> <!-- SQL 列 → MedicineItem 属性 -->
+        <result column="usedCount" property="usedCount"/>
+        <result column="prescription" property="prescription"/>
+    </resultMap>
+
+    <resultMap id="PrescriptionResultMap" type="com.tjetc.vo.PrescriptionVO">
+        <result column="id" property="id"/>
+        <result column="doctorName" property="doctorName"/>
+        <result column="department" property="department"/>
+        <result column="time" property="time"/>
+        <result column="status" property="status"/>
+        <result column="createTime" property="createTime"/>
+        <result column="diagnosis" property="diagnosis"/>
+        <collection property="medicines" ofType="com.tjetc.domain.MedicineItem" resultMap="MedicineItemResultMap"/>
+    </resultMap>
+
+    <select id="selectByUserId" resultMap="PrescriptionResultMap">
+        SELECT
+        p.id AS id,
+        d.name AS doctorName,
+        d.department AS department,
+        p.create_time AS time,
+        'valid' AS status,
+        UNIX_TIMESTAMP(p.create_time) * 1000 AS createTime,
+        p.msg AS diagnosis,
+        m.name AS medicineName,
+        m.prescription AS prescription,
+        pm.count AS count,
+        IFNULL(pm.used_count, 0) AS usedCount
+        FROM
+        patients pa
+        JOIN prescription p ON pa.id = p.patient_id
+        JOIN doctors d ON p.doctor_id = d.id
+        LEFT JOIN prescription_mediclie pm ON p.id = pm.prescription_id
+        LEFT JOIN medicine m ON pm.medicine_id = m.id
+        WHERE
+        pa.user_id = #{userId}
+    </select>
+</mapper>

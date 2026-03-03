@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjetc.dao.ScheduleTimesMapper">
+  <resultMap id="BaseResultMap" type="com.tjetc.domain.ScheduleTimes">
+    <!--@mbg.generated-->
+    <!--@Table schedule_times-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="schedule_id" jdbcType="BIGINT" property="scheduleId" />
+    <result column="time_period" jdbcType="VARCHAR" property="timePeriod" />
+    <result column="total_quota" jdbcType="INTEGER" property="totalQuota" />
+    <result column="remaining_quota" jdbcType="INTEGER" property="remainingQuota" />
+    <result column="is_available" jdbcType="BOOLEAN" property="isAvailable" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, schedule_id, time_period, total_quota, remaining_quota, is_available
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from schedule_times
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    <!--@mbg.generated-->
+    delete from schedule_times
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.tjetc.domain.ScheduleTimes" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into schedule_times (schedule_id, time_period, total_quota, 
+      remaining_quota, is_available)
+    values (#{scheduleId,jdbcType=BIGINT}, #{timePeriod,jdbcType=VARCHAR}, #{totalQuota,jdbcType=INTEGER}, 
+      #{remainingQuota,jdbcType=INTEGER}, #{isAvailable,jdbcType=BOOLEAN})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.tjetc.domain.ScheduleTimes" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into schedule_times
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="scheduleId != null">
+        schedule_id,
+      </if>
+      <if test="timePeriod != null">
+        time_period,
+      </if>
+      <if test="totalQuota != null">
+        total_quota,
+      </if>
+      <if test="remainingQuota != null">
+        remaining_quota,
+      </if>
+      <if test="isAvailable != null">
+        is_available,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="scheduleId != null">
+        #{scheduleId,jdbcType=BIGINT},
+      </if>
+      <if test="timePeriod != null">
+        #{timePeriod,jdbcType=VARCHAR},
+      </if>
+      <if test="totalQuota != null">
+        #{totalQuota,jdbcType=INTEGER},
+      </if>
+      <if test="remainingQuota != null">
+        #{remainingQuota,jdbcType=INTEGER},
+      </if>
+      <if test="isAvailable != null">
+        #{isAvailable,jdbcType=BOOLEAN},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tjetc.domain.ScheduleTimes">
+    <!--@mbg.generated-->
+    update schedule_times
+    <set>
+      <if test="scheduleId != null">
+        schedule_id = #{scheduleId,jdbcType=BIGINT},
+      </if>
+      <if test="timePeriod != null">
+        time_period = #{timePeriod,jdbcType=VARCHAR},
+      </if>
+      <if test="totalQuota != null">
+        total_quota = #{totalQuota,jdbcType=INTEGER},
+      </if>
+      <if test="remainingQuota != null">
+        remaining_quota = #{remainingQuota,jdbcType=INTEGER},
+      </if>
+      <if test="isAvailable != null">
+        is_available = #{isAvailable,jdbcType=BOOLEAN},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tjetc.domain.ScheduleTimes">
+    <!--@mbg.generated-->
+    update schedule_times
+    set schedule_id = #{scheduleId,jdbcType=BIGINT},
+      time_period = #{timePeriod,jdbcType=VARCHAR},
+      total_quota = #{totalQuota,jdbcType=INTEGER},
+      remaining_quota = #{remainingQuota,jdbcType=INTEGER},
+      is_available = #{isAvailable,jdbcType=BOOLEAN}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,83 @@
+{
+  "test001" : [ {
+    "messageType" : "USER",
+    "text" : "你是谁",
+    "metadata" : {
+      "messageType" : "USER"
+    },
+    "toolCalls" : null
+  }, {
+    "messageType" : "ASSISTANT",
+    "text" : "您好！我是医疗服务辅助助手，可以帮助您查询医生信息、科室信息、号源情况、药品余量以及您的历史订单等。如果您有任何需要查询的内容，请告诉我具体需求，我会尽力为您服务！请注意，我无法提供医疗诊断或用药建议，仅能通过调用相关工具为您提供准确的信息。有什么可以帮您的吗？",
+    "metadata" : {
+      "role" : "ASSISTANT",
+      "messageType" : "ASSISTANT",
+      "finishReason" : "STOP",
+      "refusal" : "",
+      "index" : 0,
+      "id" : "chatcmpl-08b95bd9-887e-9423-bbe4-1d3495f80226"
+    },
+    "toolCalls" : [ ]
+  }, {
+    "messageType" : "USER",
+    "text" : "现在医生都有谁",
+    "metadata" : {
+      "messageType" : "USER"
+    },
+    "toolCalls" : null
+  }, {
+    "messageType" : "ASSISTANT",
+    "text" : "为了给您提供准确的医生信息，请您先告诉我一些具体的查询条件，比如：\n- 您希望查询哪个科室的医生？\n- 是否有特定的医生职称要求（如主治医师、副主任医师、主任医师）？\n- 医生是否需要擅长某些特定领域？\n\n有了这些信息后，我就可以帮您查询符合条件的医生名单了！",
+    "metadata" : {
+      "role" : "ASSISTANT",
+      "messageType" : "ASSISTANT",
+      "finishReason" : "STOP",
+      "refusal" : "",
+      "index" : 0,
+      "id" : "chatcmpl-d75023fe-aaf4-9f16-98ab-ce62483f6224"
+    },
+    "toolCalls" : [ ]
+  }, {
+    "messageType" : "USER",
+    "text" : "儿科医生都有谁",
+    "metadata" : {
+      "messageType" : "USER"
+    },
+    "toolCalls" : null
+  }, {
+    "messageType" : "USER",
+    "text" : "你是谁",
+    "metadata" : {
+      "messageType" : "USER"
+    },
+    "toolCalls" : null
+  }, {
+    "messageType" : "USER",
+    "text" : "你是谁",
+    "metadata" : {
+      "messageType" : "USER"
+    },
+    "toolCalls" : null
+  }, {
+    "messageType" : "USER",
+    "text" : "你是谁",
+    "metadata" : {
+      "messageType" : "USER"
+    },
+    "toolCalls" : null
+  }, {
+    "messageType" : "USER",
+    "text" : "你是谁",
+    "metadata" : {
+      "messageType" : "USER"
+    },
+    "toolCalls" : null
+  }, {
+    "messageType" : "USER",
+    "text" : "你是谁",
+    "metadata" : {
+      "messageType" : "USER"
+    },
+    "toolCalls" : null
+  } ]
+}
